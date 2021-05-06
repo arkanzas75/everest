@@ -169,7 +169,7 @@ h6 {
 .attach {
   z-index: 3;
   position: fixed;
-  left: 20px;
+  right: 20px;
   bottom: 20px;
 }
 
@@ -1633,7 +1633,7 @@ h6 {
 
 .faq {
   margin: 150px 0 0 0;
-  padding: 50px 0 140px 0;
+  padding: 50px 0 calc(0px + 140 * ((100vw - 320px) / (1920 - 320))) 0;
   position: relative;
 }
 
@@ -2380,6 +2380,7 @@ h6 {
     margin-top: 0 !important;
     margin: 0 -10px;
     max-height: 450px;
+    height: calc(220px + 200 * ((100vw - 320px) / (768 - 320))) !important;
   }
 
   .welcome__picture:before {
