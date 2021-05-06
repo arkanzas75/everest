@@ -191,6 +191,12 @@ $(document).ready(function(){
 		burger.toggleClass('_active');
 		burger_cnt.toggleClass('_active');
 	});
+	$('.header-menu__item').on('click', function() {
+		$('.header-menu__item').removeClass('_current');
+		$(this).addClass('_current');
+		burger.removeClass('_active');
+		burger_cnt.removeClass('_active');
+	});
 	function pagePaddingChange() {
 		let height = parseFloat($('header').css('height'));
 		$('.welcome').css('padding-top', height);
@@ -211,7 +217,7 @@ $(document).ready(function(){
 	pagePaddingChange();
 	$(window).on('resize', pagePaddingChange);
 	function headerBg() {
-		if ($(window).scrollTop() > 100) {
+		if ($(window).scrollTop() > 99) {
 			$('.header__bottom').addClass('_bg');
 		} else {
 			$('.header__bottom').removeClass('_bg');
